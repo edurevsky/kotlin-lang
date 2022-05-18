@@ -5,7 +5,7 @@ fun main() {
     contaAlex.fazDeposito(42.0)
     contaAlex.fazDeposito(-1000.0)
 
-    val contaFran = Conta("Fran", 1002)
+    val contaFran = Conta(numero = 1002, titular = "Fran")
     contaFran.fazDeposito(300.0)
 
     contaAlex.mostrarDados()
@@ -36,8 +36,8 @@ fun main() {
 }
 
 class Conta(
-    var titular: String,
-    var numero: Int
+    val titular: String,
+    val numero: Int
 ) {
     var saldo = 0.0
         private set
@@ -75,17 +75,6 @@ class Conta(
         destino.fazDeposito(valor)
         return true
     }
-
-//    fun getSaldo(): Double {
-//        return saldo
-//    }
-//
-//    fun setSaldo(valor: Double) {
-//        if (valor <= 0) {
-//            return
-//        }
-//        this.saldo = valor
-//    }
 
     fun mostrarDados() {
         println("--------------------")
