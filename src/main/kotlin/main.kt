@@ -1,15 +1,11 @@
 fun main() {
     println("Bem vindo ao Bytebank!")
 
-    val contaAlex = Conta()
-    contaAlex.titular = "Alex"
-    contaAlex.numero = 1001
+    val contaAlex = Conta("Alex", 1001)
     contaAlex.fazDeposito(42.0)
     contaAlex.fazDeposito(-1000.0)
 
-    val contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 1002
+    val contaFran = Conta("Fran", 1002)
     contaFran.fazDeposito(300.0)
 
     contaAlex.mostrarDados()
@@ -39,9 +35,10 @@ fun main() {
     println("Saldo Alex: ${contaAlex.saldo}")
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
+class Conta(
+    var titular: String,
+    var numero: Int
+) {
     var saldo = 0.0
         private set
 
@@ -64,12 +61,16 @@ class Conta {
 
     fun fazTransferencia(destino: Conta, valor: Double): Boolean {
         if (valor > this.saldo) {
-            println("Transferência mal sucedida de $$valor " +
-                    "($titular -> ${destino.titular})")
+            println(
+                "Transferência mal sucedida de $$valor " +
+                        "($titular -> ${destino.titular})"
+            )
             return false
         }
-        println("Transferência bem sucedida de $$valor " +
-                "($titular -> ${destino.titular})")
+        println(
+            "Transferência bem sucedida de $$valor " +
+                    "($titular -> ${destino.titular})"
+        )
         this.saldo -= valor
         destino.fazDeposito(valor)
         return true
@@ -107,9 +108,11 @@ fun fazLacos() {
         var saldo = i + 2.0
 
         // Template String
-        println("Titular: $titular\n" +
-                "Número da conta: $numeroDaConta\n" +
-                "Saldo da conta: $saldo\n")
+        println(
+            "Titular: $titular\n" +
+                    "Número da conta: $numeroDaConta\n" +
+                    "Saldo da conta: $saldo\n"
+        )
     }
 }
 
