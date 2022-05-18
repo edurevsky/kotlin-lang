@@ -13,12 +13,62 @@ fun main() {
 
     contaAlex.mostrarDados()
     contaFran.mostrarDados()
+
+    contaAlex.fazDeposito(90.0)
+    println("Novo saldo de Alex: ${contaAlex.saldo}")
+
+    contaFran.fazDeposito(10.0)
+    println("Novo saldo de Fran: ${contaFran.saldo}")
+
+    contaAlex.fazSaque(40.0)
+    println("Novo saldo de Alex: ${contaAlex.saldo}")
+
+    contaFran.fazSaque(250.0)
+    println("Novo saldo de Fran: ${contaFran.saldo}")
+
+    contaAlex.fazSaque(500.0)
+    println("Saldo Alex: ${contaAlex.saldo}")
+
+    contaFran.fazSaque(61.0)
+    println("Saldo Fran: ${contaFran.saldo}")
+
+    contaFran.fazTransferencia(contaAlex, 59.0)
+
+    println("Saldo Fran: ${contaFran.saldo}")
+    println("Saldo Alex: ${contaAlex.saldo}")
 }
 
 class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
+
+    fun fazDeposito(valor: Double) {
+        println("Deposito na conta de $titular...")
+        this.saldo += valor
+    }
+
+    fun fazSaque(valor: Double) {
+        if (valor > this.saldo) {
+            println("Saque em excesso na conta de $titular...")
+            return
+        }
+        println("Saque na conta de $titular...")
+        this.saldo -= valor
+    }
+
+    fun fazTransferencia(destino: Conta, valor: Double): Boolean {
+        if (valor > this.saldo) {
+            println("Transferência mal sucedida de $$valor " +
+                    "($titular -> ${destino.titular})")
+            return false
+        }
+        println("Transferência bem sucedida de $$valor " +
+                "($titular -> ${destino.titular})")
+        this.saldo -= valor
+        destino.saldo += valor
+        return true
+    }
 
     fun mostrarDados() {
         println("--------------------")
