@@ -10,7 +10,6 @@ class Diretor(
         return senha == this.senha
     }
 
-//    fun bonificacao(): Double {
-//        return salario * .2
-//    }
+    override val bonificacao: Double
+        get() = super.bonificacao + salario + plr
 }

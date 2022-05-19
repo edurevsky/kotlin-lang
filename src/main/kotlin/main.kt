@@ -7,7 +7,7 @@ fun main() {
     println("Nome: ${fulano.nome}")
     println("CPF: ${fulano.cpf}")
     println("Salário: ${fulano.salario}")
-    println("Bonificação: ${fulano.bonificacao()}")
+    println("Bonificação: ${fulano.bonificacao}")
 
     val ciclano = Gerente(
         nome = "Ciclano",
@@ -15,7 +15,7 @@ fun main() {
         salario = 4500.0,
         senha = "coxinha123"
     )
-    println("Bonificação: ${ciclano.bonificacao()}")
+    println("Bonificação: ${ciclano.bonificacao}")
 
     if (ciclano.autentica("coxinha123")) {
         println("Autenticou com sucesso")
@@ -31,5 +31,5 @@ fun main() {
         plr = 200.0
     )
 
-    println(beltrano.nome)
+    println("Bonificação ${beltrano.bonificacao}")
 }
