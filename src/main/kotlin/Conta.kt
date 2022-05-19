@@ -1,4 +1,4 @@
-class Conta(
+open class Conta(
     val titular: String,
     val numero: Int
 ) {
@@ -9,16 +9,16 @@ class Conta(
         if (valor <= 0) {
             return
         }
-        println("Deposito na conta de $titular...")
+        println("Deposito de $$valor na conta de $titular...")
         this.saldo += valor
     }
 
-    fun fazSaque(valor: Double) {
+    open fun fazSaque(valor: Double) {
         if (valor > this.saldo) {
             println("Saque em excesso na conta de $titular...")
             return
         }
-        println("Saque na conta de $titular...")
+        println("Saque de $$valor na conta de $titular...")
         this.saldo -= valor
     }
 
