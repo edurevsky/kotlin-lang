@@ -1,9 +1,9 @@
-class Analista(
+class Auxiliar(
     nome: String,
     cpf: String,
     salario: Double
 ) : Funcionario(nome, cpf, salario) {
 
     override val bonificacao: Double
-        get() = salario * .1
+        get() = salario * .05
 }

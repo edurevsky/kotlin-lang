@@ -1,11 +1,10 @@
 fun testaFuncionarios() {
-    val fulano = Funcionario("Fulano", "012.345.678-90", 3000.0)
+    val fulano = Analista("Fulano", "012.345.678-90", 3000.0)
 
     println("Nome: ${fulano.nome}")
     println("CPF: ${fulano.cpf}")
     println("Salário: ${fulano.salario}")
     println("Bonificação fulano: ${fulano.bonificacao}")
-
     val ciclano = Gerente(
         nome = "Ciclano",
         cpf = "012.345.678-90",

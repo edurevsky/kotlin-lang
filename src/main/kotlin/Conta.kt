@@ -1,9 +1,9 @@
-open class Conta(
+abstract class Conta(
     val titular: String,
     val numero: Int
 ) {
     var saldo = 0.0
-        private set
+        protected set
 
     fun fazDeposito(valor: Double) {
         if (valor <= 0) {
@@ -13,14 +13,7 @@ open class Conta(
         this.saldo += valor
     }
 
-    open fun fazSaque(valor: Double) {
-        if (valor > this.saldo) {
-            println("Saque em excesso na conta de $titular...")
-            return
-        }
-        println("Saque de $$valor na conta de $titular...")
-        this.saldo -= valor
-    }
+    abstract fun fazSaque(valor: Double)
 
     fun fazTransferencia(destino: Conta, valor: Double): Boolean {
         if (valor > this.saldo) {

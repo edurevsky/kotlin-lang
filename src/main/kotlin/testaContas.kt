@@ -1,9 +1,9 @@
 fun testaContas() {
-    val contaAlex = Conta("Alex", 1001)
+    val contaAlex = ContaCorrente("Alex", 1001)
     contaAlex.fazDeposito(42.0)
     contaAlex.fazDeposito(-1000.0)
 
-    val contaFran = Conta(numero = 1002, titular = "Fran")
+    val contaFran = ContaCorrente(numero = 1002, titular = "Fran")
     contaFran.fazDeposito(300.0)
 
     contaAlex.mostrarDados()
