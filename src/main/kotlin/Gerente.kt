@@ -3,9 +3,9 @@ class Gerente(
     cpf: String,
     salario: Double,
     val senha: String
-) : Funcionario(nome, cpf, salario) {
+) : Funcionario(nome, cpf, salario), Autenticavel {
 
-    fun autentica(senha: String): Boolean {
+    override fun autentica(senha: String): Boolean {
         return senha == this.senha
     }
 

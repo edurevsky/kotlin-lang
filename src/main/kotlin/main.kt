@@ -4,4 +4,5 @@ fun main() {
     // testaContas()
     // testaFuncionarios()
     // testaContasDiferentes()
+    testaAutenticacao()
 }
