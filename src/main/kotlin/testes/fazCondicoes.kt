@@ -1,19 +1,21 @@
+package testes
+
 fun main() {
     fazCondicoes(0.0)
 }
 
 fun fazCondicoes(saldo: Double) {
     if (saldo > 0.0) {
-        println("A modelos.Conta é positiva")
+        println("A conta é positiva")
     } else if (saldo == 0.0) {
-        println("A modelos.Conta é neutra")
+        println("A conta é neutra")
     } else {
-        println("A modelos.Conta é negativa")
+        println("A conta é negativa")
     }
 
     when {
-        saldo > 0.0 -> println("A modelos.Conta é positiva")
-        saldo == 0.0 -> println("A modelos.Conta é neutra")
-        else -> println("A modelos.Conta é negativa")
+        saldo > 0.0 -> println("A conta é positiva")
+        saldo == 0.0 -> println("A conta é neutra")
+        else -> println("A conta é negativa")
     }
 }

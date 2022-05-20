@@ -1,8 +1,10 @@
+import testes.testaAutenticacao
+
 fun main() {
     println("Bem vindo ao Bytebank!")
 
-    // testaContas()
-    // testaFuncionarios()
-    // testaContasDiferentes()
+    // testes.testaContas()
+    // testes.testaFuncionarios()
+    // testes.testaContasDiferentes()
     testaAutenticacao()
 }

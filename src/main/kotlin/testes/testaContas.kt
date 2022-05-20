@@ -1,3 +1,5 @@
+package testes
+
 import modelos.ContaCorrente
 
 fun testaContas() {

@@ -1,8 +1,5 @@
 package modelos
 
-import modelos.Autenticavel
-import modelos.Funcionario
-
 class Diretor(
     nome: String,
     cpf: String,

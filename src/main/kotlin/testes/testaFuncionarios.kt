@@ -1,3 +1,5 @@
+package testes
+
 import modelos.Analista
 import modelos.CalculadoraDeBonificacao
 import modelos.Diretor
