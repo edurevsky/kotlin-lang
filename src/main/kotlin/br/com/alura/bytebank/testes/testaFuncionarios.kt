@@ -1,9 +1,9 @@
-package testes
+package br.com.alura.bytebank.testes
 
-import modelos.Analista
-import modelos.CalculadoraDeBonificacao
-import modelos.Diretor
-import modelos.Gerente
+import br.com.alura.bytebank.modelos.Analista
+import br.com.alura.bytebank.modelos.CalculadoraDeBonificacao
+import br.com.alura.bytebank.modelos.Diretor
+import br.com.alura.bytebank.modelos.Gerente
 
 fun testaFuncionarios() {
     val fulano = Analista("Fulano", "012.345.678-90", 3000.0)

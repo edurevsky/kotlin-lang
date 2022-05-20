@@ -1,9 +1,9 @@
-package testes
+package br.com.alura.bytebank.testes
 
-import modelos.Cliente
-import modelos.Diretor
-import modelos.Gerente
-import modelos.SistemaInterno
+import br.com.alura.bytebank.modelos.Cliente
+import br.com.alura.bytebank.modelos.Diretor
+import br.com.alura.bytebank.modelos.Gerente
+import br.com.alura.bytebank.modelos.SistemaInterno
 
 fun testaAutenticacao() {
     val sistemaInterno = SistemaInterno()

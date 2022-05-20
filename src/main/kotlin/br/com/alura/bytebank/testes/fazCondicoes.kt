@@ -1,4 +1,4 @@
-package testes
+package br.com.alura.bytebank.testes
 
 fun main() {
     fazCondicoes(0.0)

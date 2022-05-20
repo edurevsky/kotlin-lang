@@ -1,4 +1,4 @@
-import testes.testaAutenticacao
+import br.com.alura.bytebank.testes.testaAutenticacao
 
 fun main() {
     println("Bem vindo ao Bytebank!")

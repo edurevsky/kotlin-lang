@@ -1,8 +1,8 @@
-package testes
+package br.com.alura.bytebank.testes
 
-import modelos.ContaCorrente
-import modelos.ContaPoupanca
-import modelos.ContaSalario
+import br.com.alura.bytebank.modelos.ContaCorrente
+import br.com.alura.bytebank.modelos.ContaPoupanca
+import br.com.alura.bytebank.modelos.ContaSalario
 
 fun testeContasTransferiveis() {
 
