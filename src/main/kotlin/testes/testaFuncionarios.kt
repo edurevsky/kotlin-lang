@@ -1,3 +1,8 @@
+import modelos.Analista
+import modelos.CalculadoraDeBonificacao
+import modelos.Diretor
+import modelos.Gerente
+
 fun testaFuncionarios() {
     val fulano = Analista("Fulano", "012.345.678-90", 3000.0)
 
@@ -29,7 +34,7 @@ fun testaFuncionarios() {
     println("Bonificação beltrano: ${beltrano.bonificacao}")
 
     val analista = Analista(
-        nome = "Analista",
+        nome = "modelos.Analista",
         cpf = "012.345.678-90",
         salario = 4000.0
     )

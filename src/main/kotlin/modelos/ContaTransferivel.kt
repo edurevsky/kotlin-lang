@@ -1,12 +1,9 @@
-class ContaPoupanca(
+package modelos
+
+abstract class ContaTransferivel(
     titular: String,
     numero: Int
-) : ContaTransferivel(titular, numero) {
-
-    override fun fazSaque(valor: Double) {
-        if (valor > this.saldo) return
-        this.saldo -= valor
-    }
+) : Conta(titular, numero), Transferivel {
 
     override fun fazTransferencia(destino: Conta, valor: Double): Boolean {
         if (valor > this.saldo) return false

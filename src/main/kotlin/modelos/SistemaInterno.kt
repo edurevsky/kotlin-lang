@@ -1,3 +1,7 @@
+package modelos
+
+import modelos.Autenticavel
+
 class SistemaInterno {
 
     fun autentica(autenticavel: Autenticavel, senha: String) {

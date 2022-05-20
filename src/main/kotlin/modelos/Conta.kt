@@ -1,3 +1,5 @@
+package modelos
+
 abstract class Conta(
     val titular: String,
     val numero: Int
@@ -18,7 +20,7 @@ abstract class Conta(
     fun mostrarDados() {
         println("--------------------")
         println("Titular: $titular")
-        println("Número da Conta: $numero")
+        println("Número da modelos.Conta: $numero")
         println("Saldo: $saldo")
         println("--------------------")
     }

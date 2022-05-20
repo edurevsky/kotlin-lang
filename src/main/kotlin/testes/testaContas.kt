@@ -1,3 +1,5 @@
+import modelos.ContaCorrente
+
 fun testaContas() {
     val contaAlex = ContaCorrente("Alex", 1001)
     contaAlex.fazDeposito(42.0)

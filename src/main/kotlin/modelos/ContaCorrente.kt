@@ -1,3 +1,5 @@
+package modelos
+
 class ContaCorrente(
     titular: String,
     numero: Int
@@ -5,7 +7,6 @@ class ContaCorrente(
 
     override fun fazSaque(valor: Double) {
         val valorComTaxa = valor + 0.1
-        // super.fazSaque(valorComTaxa)
         if (valorComTaxa > this.saldo) return
         this.saldo -= valorComTaxa
     }

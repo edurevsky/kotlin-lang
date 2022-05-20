@@ -1,3 +1,7 @@
+package modelos
+
+import modelos.Funcionario
+
 class CalculadoraDeBonificacao {
 
     var total: Double = 0.0

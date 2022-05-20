@@ -1,3 +1,8 @@
+package modelos
+
+import modelos.Autenticavel
+import modelos.Funcionario
+
 class Gerente(
     nome: String,
     cpf: String,

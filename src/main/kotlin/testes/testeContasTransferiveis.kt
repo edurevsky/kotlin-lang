@@ -1,3 +1,7 @@
+import modelos.ContaCorrente
+import modelos.ContaPoupanca
+import modelos.ContaSalario
+
 fun testeContasTransferiveis() {
 
     val contaCorrente = ContaCorrente(
