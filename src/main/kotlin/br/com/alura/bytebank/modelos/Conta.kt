@@ -1,7 +1,7 @@
 package br.com.alura.bytebank.modelos
 
 abstract class Conta(
-    val titular: String,
+    val titular: Cliente,
     val numero: Int
 ) {
     var saldo = 0.0
@@ -11,7 +11,7 @@ abstract class Conta(
         if (valor <= 0) {
             return
         }
-        println("Deposito de $$valor na conta de $titular...")
+        println("Deposito de $$valor na conta de ${titular.nome}...")
         this.saldo += valor
     }
 
@@ -19,8 +19,8 @@ abstract class Conta(
 
     fun mostrarDados() {
         println("--------------------")
-        println("Titular: $titular")
-        println("Número da modelos.Conta: $numero")
+        println("Titular: ${titular.nome}")
+        println("Número da conta: $numero")
         println("Saldo: $saldo")
         println("--------------------")
     }

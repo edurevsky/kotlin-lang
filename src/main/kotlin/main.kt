@@ -1,10 +1,13 @@
 import br.com.alura.bytebank.testes.testaAutenticacao
+import br.com.alura.bytebank.testes.testaContas
+import br.com.alura.bytebank.testes.testaContasDiferentes
+import br.com.alura.bytebank.testes.testaFuncionarios
 
 fun main() {
     println("Bem vindo ao Bytebank!")
 
-    // testes.testaContas()
-    // testes.testaFuncionarios()
-    // testes.testaContasDiferentes()
+    testaContas()
+    testaFuncionarios()
+    testaContasDiferentes()
     testaAutenticacao()
 }

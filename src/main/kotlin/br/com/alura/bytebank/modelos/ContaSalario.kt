@@ -1,7 +1,7 @@
 package br.com.alura.bytebank.modelos
 
 class ContaSalario(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : Conta(titular, numero) {
 
@@ -9,6 +9,7 @@ class ContaSalario(
         if (valor > this.saldo) {
             return
         }
+        println("Saque de $$valor na conta de ${titular.nome}")
         this.saldo -= valor
     }
 }

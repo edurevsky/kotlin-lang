@@ -1,5 +1,6 @@
 package br.com.alura.bytebank.testes
 
+import br.com.alura.bytebank.modelos.Cliente
 import br.com.alura.bytebank.modelos.ContaCorrente
 import br.com.alura.bytebank.modelos.ContaPoupanca
 import br.com.alura.bytebank.modelos.ContaSalario
@@ -7,17 +8,29 @@ import br.com.alura.bytebank.modelos.ContaSalario
 fun testeContasTransferiveis() {
 
     val contaCorrente = ContaCorrente(
-        titular = "João",
+        titular = Cliente(
+            nome = "João",
+            cpf = "",
+            senha = "senha"
+        ),
         numero = 8217
     )
 
     val contaPoupanca = ContaPoupanca(
-        titular = "Mari",
+        titular = Cliente(
+            nome = "Mari",
+            cpf = "",
+            senha = "senha"
+        ),
         numero = 4242
     )
 
     val contaSalario = ContaSalario(
-        titular = "Mário",
+        titular = Cliente(
+            nome = "Mário",
+            cpf = "",
+            senha = "senha"
+        ),
         numero = 1281
     )
 
