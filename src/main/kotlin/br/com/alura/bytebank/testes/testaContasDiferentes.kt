@@ -15,7 +15,7 @@ fun testaContasDiferentes() {
     )
 
     val contaPoupanca = ContaPoupanca(
-        titular = Cliente("Fran", "", "senha"),
+        titular = Cliente(nome = "Fran", cpf = "", senha = "senha"),
         numero = 1001
     )
 

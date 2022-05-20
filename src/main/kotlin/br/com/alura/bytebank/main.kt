@@ -1,3 +1,5 @@
+package br.com.alura.bytebank
+
 import br.com.alura.bytebank.testes.testaAutenticacao
 import br.com.alura.bytebank.testes.testaContas
 import br.com.alura.bytebank.testes.testaContasDiferentes

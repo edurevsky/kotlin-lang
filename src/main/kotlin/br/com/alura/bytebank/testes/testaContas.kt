@@ -2,14 +2,27 @@ package br.com.alura.bytebank.testes
 
 import br.com.alura.bytebank.modelos.Cliente
 import br.com.alura.bytebank.modelos.ContaCorrente
+import br.com.alura.bytebank.modelos.Endereco
 
 fun testaContas() {
-    val alex = Cliente("Alex", "", "senha")
+    val alex = Cliente(
+        nome = "Alex",
+        cpf = "",
+        senha = "senha"
+    )
     val contaAlex = ContaCorrente(alex, 1001)
     contaAlex.fazDeposito(42.0)
     contaAlex.fazDeposito(-1000.0)
 
-    val fran = Cliente("Fran", "", "senha")
+    val fran = Cliente(
+        nome = "Fran",
+        cpf = "",
+        senha = "senha",
+        endereco = Endereco(
+            logradouro = "Rua Vergueiro",
+            numero = 42
+        )
+    )
     val contaFran = ContaCorrente(numero = 1002, titular = fran)
     contaFran.fazDeposito(300.0)
 
