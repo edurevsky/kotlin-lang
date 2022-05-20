@@ -1,9 +1,7 @@
 package br.com.alura.bytebank
 
-import br.com.alura.bytebank.testes.testaAutenticacao
-import br.com.alura.bytebank.testes.testaContas
-import br.com.alura.bytebank.testes.testaContasDiferentes
-import br.com.alura.bytebank.testes.testaFuncionarios
+import br.com.alura.bytebank.modelos.Conta
+import br.com.alura.bytebank.testes.*
 
 fun main() {
     println("Bem vindo ao Bytebank!")
@@ -11,5 +9,8 @@ fun main() {
     testaContas()
     testaFuncionarios()
     testaContasDiferentes()
+    testeContasTransferiveis()
     testaAutenticacao()
+
+    println("Total de contas: ${Conta.totalContas}")
 }
