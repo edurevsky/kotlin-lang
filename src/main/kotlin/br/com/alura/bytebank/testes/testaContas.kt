@@ -26,8 +26,8 @@ fun testaContas() {
     val contaFran = ContaCorrente(numero = 1002, titular = fran)
     contaFran.fazDeposito(300.0)
 
-    contaAlex.mostrarDados()
-    contaFran.mostrarDados()
+    println(contaAlex)
+    println(contaFran)
 
     contaAlex.fazDeposito(90.0)
     println("Novo saldo de Alex: ${contaAlex.saldo}")

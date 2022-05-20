@@ -26,14 +26,10 @@ abstract class Conta(
 
     abstract fun fazSaque(valor: Double)
 
-    fun mostrarDados() {
-        println("-Cliente---------------")
-        println("Titular: ${titular.nome}")
-        println("------Endereco---------")
-        titular.endereco.mostraEndereco()
-        println("------Conta------------")
-        println("Número da conta: $numero")
-        println("Saldo: $saldo")
-        println("-----------------------")
+    override fun toString(): String {
+        return "Titular: ${titular.nome}\n" +
+                "${titular.endereco}" +
+                "Número da conta: $numero\n" +
+                "Saldo: $saldo\n"
     }
 }

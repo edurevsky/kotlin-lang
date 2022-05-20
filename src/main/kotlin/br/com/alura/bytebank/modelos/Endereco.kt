@@ -9,10 +9,26 @@ class Endereco(
     var cep: String = "",
     var complemento: String = ""
 ) {
-    fun mostraEndereco() {
-        println("CEP: $cep")
-        println("Logradouro: $logradouro")
-        println("Numero: $numero")
-        println("Complemento: $complemento")
+
+    override fun toString(): String {
+        return "CEP: $cep\n" +
+                "Logradouro: $logradouro\n" +
+                "Numero: $numero\n" +
+                "Complemento: $complemento\n"
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Endereco
+
+        if (cep != other.cep) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return cep.hashCode()
     }
 }
