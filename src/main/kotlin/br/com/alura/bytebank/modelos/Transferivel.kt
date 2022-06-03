@@ -2,5 +2,5 @@ package br.com.alura.bytebank.modelos
 
 interface Transferivel {
 
-    fun fazTransferencia(destino: Conta, valor: Double): Boolean
+    fun fazTransferencia(destino: Conta, valor: Double)
 }
