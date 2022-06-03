@@ -25,10 +25,10 @@ fun testaSaldoInsuficiente() {
     conta1.fazDeposito(10.0)
     conta2.fazDeposito(20.0)
 
-    conta2.fazTransferencia(valor = 20.0, destino = conta1)
+    conta2.fazTransferencia(valor = 20.0, destino = conta1, senha = "123")
 
     try {
-        conta1.fazTransferencia(valor = 40.0, destino = conta2)
+        conta1.fazTransferencia(valor = 40.0, destino = conta2, senha = "123")
     }
     catch (e: SaldoInsuficienteException) {
         println("conta1 com Saldo insuficiente")

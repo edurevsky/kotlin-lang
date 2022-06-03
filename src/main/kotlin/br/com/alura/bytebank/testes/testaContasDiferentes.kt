@@ -31,12 +31,12 @@ fun testaContasDiferentes() {
     println("Saldo corrente: ${contaCorrente.saldo}")
     println("Saldo poupança: ${contaPoupanca.saldo}")
 
-    contaCorrente.fazTransferencia(contaPoupanca, 100.0)
+    contaCorrente.fazTransferencia(contaPoupanca, 100.0, "senha")
 
     println("Saldo corrente: ${contaCorrente.saldo}")
     println("Saldo poupança: ${contaPoupanca.saldo}")
 
-    contaPoupanca.fazTransferencia(contaCorrente, 100.0)
+    contaPoupanca.fazTransferencia(contaCorrente, 100.0, "senha")
 
     println("Saldo corrente: ${contaCorrente.saldo}")
     println("Saldo poupança: ${contaPoupanca.saldo}")

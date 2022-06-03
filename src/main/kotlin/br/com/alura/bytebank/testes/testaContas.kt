@@ -47,7 +47,7 @@ fun testaContas() {
     contaFran.fazSaque(61.0)
     println("Saldo Fran: ${contaFran.saldo}")
 
-    contaFran.fazTransferencia(contaAlex, 59.0)
+    contaFran.fazTransferencia(contaAlex, 59.0, "senha")
 
     println("Saldo Fran: ${contaFran.saldo}")
     println("Saldo Alex: ${contaAlex.saldo}")

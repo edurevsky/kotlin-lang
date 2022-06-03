@@ -3,7 +3,8 @@ package br.com.alura.bytebank.modelos
 abstract class Conta(
     val titular: Cliente,
     val numero: Int
-) {
+) : Autenticavel by titular {
+
     var saldo = 0.0
         protected set
 
